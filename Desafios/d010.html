@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Bhaskara</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            width: 95vw;
+            padding-left: 10px;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            width: 700px;
+            text-align: center;
+
+            box-shadow: 0px 0px 5px black;
+
+        }
+
+        input {
+            cursor: pointer;
+            font-size: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <h1>Resolvendo Bhaskara</h1>
+        <input type="button" value="Calcular" onclick="bhaskara()">
+        <p id="res">Considerando a equação no formato <strong>ax² ± bx ± c = 0</strong>,
+        aperte o botão acima para calcular a <strong>equação</strong> e o valor de <strong>delta (∆)</strong></p>
+        <script>
+            function bhaskara(){
+                var a = Number.parseFloat(window.prompt('Qual o valor de ax?'))
+                var b = Number.parseFloat(window.prompt('Qual o valor de bx?'))
+                var c = Number.parseFloat(window.prompt('Qual o valor de c?'))
+                var delta = (b**2)-4*a*c
+                var x1 = ((-b) + Math.sqrt(delta)) / (2 * a)
+                var x2 = ((-b) - Math.sqrt(delta)) / (2 * a)
+                res.innerHTML = `<h2>Resultado</h2>
+                <p>A equação atual é <b>${a}x² ± ${b}x ± ${c}</b></p>
+                <p>O cálculo realizado será <b>∆ = ${b}² - 4 ∙ ${a} ∙ ${c}</b></p>
+                <p>O valor de <b>∆ = ${delta} → √${Math.sqrt(delta)}</b></p>
+                <p>O valor de <b>x1 = ${x1}</b></p>
+                <p>O valor de <b>x2 = ${x2}</b></p>
+                `
+            }
+        </script>
+    </main>
+
+</body>
+</html>
