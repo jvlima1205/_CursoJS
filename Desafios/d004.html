@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Calcula Troco</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            
+        }
+        input{   
+            cursor: pointer;
+            font-size: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcula troco</h1>
+    <input type="button" value="Comprar Produto" onclick="buy()">
+
+    <script>
+        function buy() {
+            var product = window.prompt('Qual o nome do produto que deseja comprar?')
+            var price = Number.parseFloat(window.prompt(`Quanto custa ${product}, que você está comprando?`))
+            var dolar = Number.parseFloat(window.prompt(`Qual foi o valor que você deu para ${product}?`))
+            var change = dolar - price
+            window.alert(`Você comprou ${product} que custou R$${price.toLocaleString('pr-BR', { style: 'currency', currency: 'BRL' })}\nDeu R$${dolar.toLocaleString('pr-BR', { style: 'currency', currency: 'BRL' })} em dinheiro e vai receber R$${change.toLocaleString('pr-BR', { style: 'currency', currency: 'BRL' })} de troco\nVolte sempre`)
+            
+        }
+    </script>
+    
+</body>
+</html>

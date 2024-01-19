@@ -19,7 +19,8 @@
     <a href="ex004.html">link formatações</a>
     <script> 
         var n1 = Number.parseInt(window.prompt('Digite um número'))
-        var n2 = Number.parseInt(window.prompt('Digite outro número')) //Obrigatório conversão para string, pois o comando window.prompt recebe em string
+        var n2 = Number.parseInt(window.prompt('Digite outro número')) 
+        //Obrigatório conversão para string, pois o comando window.prompt recebe em string
         var soma = n1 + n2
         window.confirm('A soma é: ' + 
         soma.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) + ';  '

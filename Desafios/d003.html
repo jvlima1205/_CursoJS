@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio antecessor e sucessor</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            
+        }
+        input{   
+            cursor: pointer;
+            font-size: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Antecessor e sucessor</h1>
+    <input type="button" value="Antecessor e Sucessor" onclick="conta()">
+    
+    <script>
+        function conta(){
+          var num = Number.parseFloat(window.prompt('Digite um valor inteiro'))
+          
+          window.alert(`Antes de ${Math.trunc(num)}, temos ${Math.trunc(num-1)}!\nDepois de ${Math.trunc(num)}, temos ${Math.trunc(num+1)}!`)
+        }
+    </script>
+
+</body>
+</html>

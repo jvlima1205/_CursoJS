@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio conversor de medidas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            
+        }
+        input{   
+            cursor: pointer;
+            font-size: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de medidas</h1>
+    <input type="button" value="Converter" onclick="convert()">
+    <p id="res">Clique no botão acima para iniciar</p>
+    
+
+    <script>
+        function convert(){
+            var ms = Number.parseFloat(window.prompt(`Digite uma distância em metros(m):`))
+            var mm = ms * 1000
+            var cm = ms * 100
+            var dm = ms * 10
+            var dam = ms / 10
+            var hm = ms / 100
+            var km = ms / 1000
+
+            res.innerHTML = `<p><b>A distância de ${ms.toFixed(2)} metros, corresponde:</b></p>
+            <p>${km.toLocaleString('PT-BR')} quilômetros (Km)</p>
+            <p>${hm.toLocaleString('PT-BR')} hectômetros (Hm)</p>
+            <p>${dam.toLocaleString('PT-BR')} decâmetros (Dam)</p>
+            <p>${dm.toLocaleString('PT-BR')} decimêtros (Dm)</p>
+            <p>${cm.toLocaleString('PT-BR')} centímetros (Cm)</p>
+            <p>${mm.toLocaleString('PT-BR')} Milímetros (Mm)</p>
+            `
+        }
+        
+
+    </script>
+
+</body>
+</html>

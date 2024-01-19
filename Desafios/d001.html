@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio das mensagens</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            
+        }
+        input{   
+            cursor: pointer;
+            font-size: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio das mensagens</h1>
+    <div>
+        <input type="button" value="Botão 1" onclick="click1()">
+        <input type="button" value="Botão 2" onclick="click2()">
+        <input type="button" value="Botão 3" onclick="click3()">
+    </div>
+
+    <script>
+        function click1(){
+            window.alert('Você clicou no 1° botão')
+        }
+        function click2(){
+            window.alert('Você clicou no 2° botão')
+        }
+        function click3(){
+            window.alert('Você clicou no 3° botão')
+        }
+
+    </script>
+
+</body>
+</html>

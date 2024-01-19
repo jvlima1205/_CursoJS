@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio conversão dolar</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            
+        }
+        input{   
+            cursor: pointer;
+            font-size: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Coversor R$ → US$</h1>
+    <input type="button" value="Converter" onclick="convert()">
+    <p id="res">Clique no botão acima para iniciar</p>
+
+    <script>
+        function convert(){
+            var value = Number.parseFloat(window.prompt('Quanto está a cotação do dólar?'))
+            var amount = Number.parseFloat(window.prompt('Quantos R$ você tem na carteira?'))
+
+            res.innerHTML = `<p><b>Conversão de Reais para Dólares</b></p>
+            <p>Você tem R$${amount.toFixed(2).toLocaleString('pt-br')} na carteira</p>
+            <p>Considerando que U$1.00 = R$${value.toFixed(2).toLocaleString('pt-br')} na cotação informada</p>
+            Você pode comprar $${(amount/value).toFixed(2).toLocaleString('pt-br')} dólares
+
+            `
+
+        }
+    </script>
+</body>
+</html>
