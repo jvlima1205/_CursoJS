@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio preço</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            width: 95vw;
+            padding-left: 10px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            width: 700px;
+
+            box-shadow: 0px 0px 5px black;
+
+        }
+
+        input {
+            cursor: pointer;
+            font-size: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Preço mudou</h1>
+        <input type="button" value="Verificar" onclick="change()">
+        <p id="res">Clique para verificar a mudança de preço</p>
+        <script>
+            function change() {
+                var before = Number.parseFloat(window.prompt('Qual o valor anterior do produto?'))
+                var after = Number.parseFloat(window.prompt('Qual o valor atual do produto?'))
+                res.innerHTML = `<p>O produto custava ${before.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })} e agora custa ${after.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</p>`
+                if (before < after) {
+                    res.innerHTML += `<p>O produto está mais <b>caro!</b></p>
+                    <p>O preço subiu para <b>${(after - before).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</b> em relação ao preço anterior</p>
+                    <p>Uma variação de <b>${((after - before) / before) * 100}%</b> para cima</p>
+                    `
+
+                } else {
+                    res.innerHTML += `<p>O produto está mais <b>barato!</b></p>
+                    <p>O preço abaixou para <b>${(before - after).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</b> em relação ao preço anterior</p>
+                    <p>Uma variação de <b>${(((after - before) / before) * 100).toLocaleString('pt-br')}%</b> para baixo</p>
+                    `
+                }
+            }
+        </script>
+    </main>
+</body>
+
+</html>
