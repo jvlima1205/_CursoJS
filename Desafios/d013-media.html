@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio média</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            width: 95vw;
+            padding-left: 10px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            width: 700px;
+
+            box-shadow: 0px 0px 5px black;
+
+        }
+
+        input {
+            cursor: pointer;
+            font-size: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Situação do aluno</h1>
+        <input type="button" value="Entrar com as notas" onclick="calc()">
+        <p id="res">Clique no botão acima para informar as notas do aluno</p>
+
+        <script>
+            function calc() {
+                var name = window.prompt('Qual o nome do aluno?')
+                var n1 = Number.parseFloat(window.prompt( `Primeira nota de ${name}`))
+                var n2 = Number.parseFloat(window.prompt( `Segunda nota de ${name}`))
+                var media = (n1 + n2) / 2
+
+                res.innerHTML = `<p>Com as notas ${n1.toLocaleString('pt-br')} e ${n2.toLocaleString('pt-br')} <b>a média é ${media.toLocaleString('pt-br')}</b></p>`
+
+                if (media > 6) {
+                    res.innerHTML += `<p>Com a média acima de 6,0 o aluno está <b style="background-color: lightgreen;">APROVADO</b></p>`
+                }else if (media < 3){
+                    res.innerHTML += `<p>Com a média abaixo de 3,0 o aluno está <b style="background-color: lightcoral;">REPROVADO</b></p>`
+                }else{
+                    res.innerHTML += `<p>Com a média entre 3,0 e 6,0 o aluno está de <b style="color: coral;">RECUPERAÇÃO</b></p>`
+                }
+            }
+        </script>
+
+
+    </main>
+</body>
+
+</html>
