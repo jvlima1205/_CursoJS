@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio desconto</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+
+        }
+
+        input {
+            cursor: pointer;
+            font-size: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calcular Desconto</h1>
+    <input type="button" value="Desconto de 10%" onclick="convert()">
+    <p id="res">Clique no botão acima para iniciar</p>
+
+    <script>
+        function convert() {
+            var name = window.prompt('Qual o produto que está comprando?')
+            var price = Number.parseFloat(window.prompt(`Qual o preço de ${name}?`))
+            var descont = (price / 100) * 10
+
+            res.innerHTML = `<p><b>Calculando desconto de 10%, para ${name}</b></p>
+            <p>O preço original era R$${price.toFixed(2).toLocaleString('pt-br')}</p>
+            <p>Você acaba de ganhar R$${descont.toFixed(2).toLocaleString('pt-br')} de desconto (-10%)</p>
+            <p>No fim, você vai pagar R$${(price - descont).toFixed(2).toLocaleString('pt-br')} no produto ${name}</p>
+            `
+        }
+
+
+    </script>
+
+</body>
+
+</html>
