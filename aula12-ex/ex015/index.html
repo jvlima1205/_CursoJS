@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de exercício</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loading()">
+    <header>
+        <h1>Hora do dia</h1>
+    </header>
+    <main>
+        <div>
+            <p><label for="iyear">Ano do nascimento:</label>
+                <input type="number" name="year" id="iyear" min="8" value="2004">
+            </p>
+            <p>
+                Gênero:
+                <input type="radio" name="radgender" id="imasc" >
+                <label for="imasc">Masculino</label>
+                <input type="radio" name="radgender" id="ifem"checked>
+                <label for="ifem">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verify" onclick="verify()">
+            </p>
+
+        </div>
+        <div id="res">
+            Preencha os dados acima para ver o resultado
+        </div>
+    </main>
+    <footer>
+        <p>Jvlima</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

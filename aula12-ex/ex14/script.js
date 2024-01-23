@@ -5,8 +5,8 @@ var msg = window.document.querySelector('div#msg')
 var img = window.document.querySelector('img#image')
 
 var date = new Date()
-// var hour = date.getHours()
-var hour = 22
+var hour = date.getHours()
+
 
 
 msg.innerHTML = `Agora são ${hour} horas`
