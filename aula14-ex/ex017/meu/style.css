@@ -36,3 +36,10 @@ input {
     font-size: 12pt;
     padding: 5px;
 }
+
+textarea{
+    padding: 5px;
+    resize: none;
+    font-size: 12pt;
+    
+}
