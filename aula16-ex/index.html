@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de exercício</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Analisador de números</h1>
+    </header>
+    <main>
+        <div>
+            <p>
+                <label for="fnum">Number (between 1 to 100):</label>
+                <input type="number" name="fnum" id="fnum">
+                <input type="button" value="Add" onclick="adicionar()">
+            </p>
+            <p>
+                <select name="table" id="flista" size="10">
+                    <option>Adicione números</option>
+                </select>
+            </p>
+            <p><input type="button" value="Finalize" onclick="finalizar()"></p>
+        </div>
+        <div id="res">
+        </div>
+    </main>
+    <footer>
+        <p>Jvlima</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
